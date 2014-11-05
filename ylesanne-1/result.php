@@ -6,6 +6,13 @@
   </head>
 
   <body>
+  <?php 
+  if ($_GET['age'] >= 18) {
+  	echo "Tere!" . $_GET['username'] . " Olete lehekulje vaatamiseks piisavalt vana!";
+  } else {
+  	echo "Tere" . $_GET['username'] . " Olete lehekulje kulastamiseks liiga noor!";
+  }
+  ?>
     <a href="index.php">Mine tagasi</a>
   </body>
 </html>
