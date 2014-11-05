@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+<?php
+	header('location: redirect.php')
+?>
   <head>
     <meta charset="UTF-8">
     <title>II perioodi arvestustöö - Ülesanne 2 - Suunamine</title>
