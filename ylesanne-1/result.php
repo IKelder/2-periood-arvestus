@@ -6,12 +6,21 @@
   </head>
 
   <body>
-  <?php 
-  if ($_GET['age'] >= 18) {
-  	echo "Tere!" . $_GET['username'] . " Olete lehekulje vaatamiseks piisavalt vana!";
+  <?php
+  if (empty($_GET['age']) && empty($_GET['username'])) {
+    echo "Vanus ja kasutajanimi on puudu";
+  } else if (empty($_GET['age'])) {
+    echo "Vanus on puudu";
+  } else if ( empty($_GET['username'])) {
+    echo "Kasutajanimi on puudu";
   } else {
-  	echo "Tere" . $_GET['username'] . " Olete lehekulje kulastamiseks liiga noor!";
+    if ($_GET['age'] >= 18) {
+      echo "Tere! " . $_GET['username'] . " Olete lehekulje vaatamiseks piisavalt vana!";
+    } else {
+      echo "Tere " . $_GET['username'] . " Olete lehekulje kulastamiseks liiga noor!";
+    }
   }
+  
   ?>
     <a href="index.php">Mine tagasi</a>
   </body>
